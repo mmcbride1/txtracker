@@ -27,7 +27,7 @@ trait GlobalProperty {
   /* Server properties */
   final val BROKER_LIST = kafkaProperties.getString("metadata.broker.list")
   final val SERIALIZER = kafkaProperties.getString("serializer.class")
-  final val TOPIC = "twitter"
+  final val TOPIC = kafkaProperties.getString("kafka.producer.twitter.topic")
 
   /* Kafka server properties */
   def getKafkaProperties = {
