@@ -31,5 +31,4 @@ class Schema(fields: String*) {
     })
     schema
   }
-
 }

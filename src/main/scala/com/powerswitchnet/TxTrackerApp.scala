@@ -14,9 +14,13 @@ object TxTrackerApp extends BaseLogger with GlobalProperty {
   /* Initialize the data stream */
   val stream = DataStream
 
-  /* */
+  /* Initialize the producer */
   val txproducer = TxKafkaProducer[String](TOPIC)
 
+  /**
+    * Main
+    * @param args - args
+    */
   def main(args : Array[String]): Unit = {
     while(true) {
       val tweet = stream.tracker.nextInQueue

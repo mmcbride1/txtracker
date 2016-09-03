@@ -62,7 +62,7 @@ class DataStream() extends BaseLogger with GlobalProperty {
 
   /**
     * Get the next in the status queue
-    * @return
+    * @return : Status
     */
   def nextInQueue = {
     queue.poll()
